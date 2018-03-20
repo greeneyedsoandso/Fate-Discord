@@ -4,11 +4,10 @@ import platform
 import pandas as pd
 import random
 import numpy as np
-import config.config as cfg
+import os
 from os import path
 from discord.ext.commands import Bot
 from discord.ext import commands
-
 
 prefix="!"
 client = Bot(description="Fate bot for discord.", command_prefix=prefix, pm_help = False)
@@ -122,5 +121,4 @@ def has_role(member, ref_role):
 	return False
 
 #def set_picture(url):
-
-client.run(cfg.TOKEN)
+client.run(os.environ['DISCORD_TOKEN'])
